@@ -1,0 +1,210 @@
+/* figtree-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/figtree-v9-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* figtree-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/figtree-v9-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* figtree-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/figtree-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-tight-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/inter-tight-v9-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-tight-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/inter-tight-v9-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+html {font-size: 16px;}
+
+body {
+  font-family: 'Figtree', 'Baskerville' sans-serif;
+  font-weight: false;
+  line-height: 1.65;
+}
+
+p {
+  font-family: 'Figtree', serif;
+  font-size: 1.1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Figtree', serif, sans-serif;
+  font-weight: true;
+  line-height: 1.15;
+}
+
+h1,
+.text-size-h1 {
+  font-family: 'Inter Tight', serif, sans-serif;
+  font-weight: 900;
+  margin-top: 0;
+  font-size: 3.05em;
+}
+
+h2,
+.text-size-h2 { font-size: 2.44em; }
+
+h3,
+.text-size-h3 { font-size: 1.95em; }
+
+h4,
+.text-size-h4 { font-size: 1.56em; }
+
+h5,
+.text-size-h5 { font-size: 1.25em; }
+
+.text-caption { font-size: 0.8em; }
+
+small,
+.text-small {
+  font-size: 0.64em;
+}
+
+/* ================================================================
+                        real styles
+===================================================================
+
+
+
+header*/
+
+body{
+    margin: 25px 60px 50px 60px;
+    background-color:rgb(223, 223, 223);
+    background-image: url('img/AdobeStock_740432460.jpeg');
+    background-repeat:repeat;
+    background-size:800px;
+    background-blend-mode: multiply;
+}
+
+h1{
+    text-align:left;
+    line-height:65px;
+    font-size:5em;
+    letter-spacing: -2px;
+    color:rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);
+    padding: 15px 25px 25px 25px;
+    width:fit-content;
+    height:fit-content;
+    margin-bottom:15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 8px 8px black;
+}
+
+.intro {
+    margin: 40px 0 50px 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.text{
+  display:flex;
+  flex-direction: column;
+}
+
+h2 {
+    margin: 0px 0px 5px 0px;
+}
+
+.intro p{
+  color:black;
+    margin: 5px 0 0 0;
+    text-shadow: 0 0 10px white;
+    line-height:20px;
+    background-color:white;
+}
+
+
+/* jbo cards display */
+
+.jobs {
+    display:flex;
+    flex-direction:row;
+    gap:70px;
+    margin: 0 auto;
+    justify-content:center;
+}
+
+.card{
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 8px 8px black;
+    background-color:white;
+    max-width: 320px;
+    height: fit-content;
+    padding: 30px;
+}
+
+.card img{
+    margin-bottom: 15px;
+}
+
+.card a{
+    font-weight: 600;
+    color:black;
+    padding: 3px 12px;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-decoration:none;
+}
+
+.card a:hover{
+    color:#000000;
+    border: 2px solid #000000;
+    background-color:rgb(191, 191, 191);
+
+}
+
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 10px 0 4px 0;
+}
+
+h5 {
+    margin-top:25px;
+    font-size:0.95em;
+}
+
+.card p{
+    margin-top: 25px;
+    line-height: 22px;
+}
