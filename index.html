@@ -1,13 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage</title>
+    <title>introspotive | home</title>
     <meta charset="utf-8">
-    <link href="stykes.css" rel="stylesheet">
-</head>
-    <body>
-        <h1>Homepage</h1>
-        <h2>Alexis Mabbun</h2>
-            <p>this is the homepage for my final project. hahs</p>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <body class="home">
+        <div class="header">
+            <h1>intro<span class="spot">spot</span>ive</h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="search.html" class="nav-button">search</a></li>
+                    <li><a href="blog.html" class="nav-button">blog</a></li>
+                    <li class="login"><a href="login.html">login</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="hero">
+                <section class="hero-info">
+                    <h2>Productivity starts in a<span class="comfort"> comfortable spot.</span></h2>
+                    <p>Your work is important. Where you do it matters. We're here to help you find your next
+                        perfect work/study spot to assist you in your work flow.
+                        Whether you already know what you want or you're still figuring out what you like, <em>introspotive</em>
+                        is here to help enhance your experience and make it easier for you.<br><br><br>
+                        <span class="cta-text">Let's find your next spot!</span>
+                    </p>
+                    <div class="hero-search">
+                        <!-- location selection box -->
+                        <form action="dfw.html">
+                            <select id="search-places" required>
+                                <option class="select-label" value="" disable selected hidden>Select region</option>
+                                <option value="richardson">Dallas/Fort Worth Metroplex</option>
+                            </select>
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                    
+                </section>
+            </div>
+            <section class="home-about">
+            <div class="home-about-content">
+                <img src="img/homepage/study.png" width="450px">
+                <div class="about-info">
+                    <h3>What is <em>Introspotive?</em></h3>
+                    <p><em>Introspotive</em> is a platform that aims to make it easier for you to find the perfect places to do your work, study, read,
+                    write, etc. From cafes, coffee shops, bakeries, libraries, and more, we wanted to provide a resource that makes finding
+                    the best place to work or do any other kind of activity of the like an easier process to get you out there.<br><br>
+                    Your productivity relies on your environment, and you deserve to find the places that works best for you. If you have preferences, that's
+                    perfect! And if not, that's perfect too! Our purpose is to help you discover something new, whether it be a new spot or what
+                    you like in your work environments.
+                    </p>
+                    <div class="home-about-cta">
+                        <h5><a>Learn More</a></h5>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <!-- Featuresssssssssss-->
+             <section class="home-features">
+                <h3>Our Features</h3>
+                <div class="feature-gallery">
+                    <div class="feature-card">
+                        <div class="card-header">
+                            <img src="img/icons/review-icon.png" width="55px">
+                            <div class="feature-text">
+                            <h4>Reviews</h4>
+                        </div>
+                        <p>Don't know what to expect from a place? Other users on <em>Introspotive</em> can
+                        pitch in their own reviews on the spots they go to so you know what to expect. There's
+                        nothing better than hearing from people just like you, and you can pitch in and leave
+                        reviews too!
+                        </p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="card-header">
+                            <img src="img/icons/category-icon.png" width="55px">
+                            <h4>Spot Specs</h4>
+                        </div>
+                        <p>We made it easier to identify the key attributes needed in our work environments.
+                        From outlets, Wifi access, business, space, aesthetics, and more, there are many
+                        specific categorizations to help identify the space that best interests you.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="card-header">
+                            <img src="img/icons/blog-icon.png" width="55px">
+                            <div class="feature-text">
+                            <h4>Community Blog</h4>
+                        </div>
+                        <p>Want to read or write an in-depth review about a specific spot and your experience?
+                         The community blog allows you to see where others in your community
+                        are going and is also a great space to share study tips, work resources,
+                        recommendations, and more!
+                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="feature-button">
+                        <h5><a>Try them out!</a></h5>
+                    </div>
+             </section>
+             <!----------------------------fooooter---------------------------->
+             <section class="home-footer">
+                <div class="footer-all">
+                    <h1>introspotive</h1>
+                    <div class="footer-content">
+                        <div class="footer-block g1">
+                            <h4>Get in Touch</h4>
+                            <ul class="contact">
+                                <li class="foot-email">contact@introspotive.com</li>
+                                <li class="foot-phone">(140)-111-0106</li>
+                                <li class="foot-addy">1110 The Spot Place, Suite 244,<br>Existence, TX 72067 </li>
+                            </ul>
+                        </div>
+                        <div class="footer-block g2">
+                            <h4>Links</h4>
+                            <ul>
+                                <li>My Account</li>
+                                <li>Settings</li>
+                                <li>About</li>
+                            </ul>
+                        </div>
+                        <div class="footer-block g3">
+                            <h4>Follow Us</h4>
+                            <ul>
+                                <li><img src="img/icons/insta-icon.png" width="60px"></li>
+                                <li><img src="img/icons/twitter-icon.png" width="60px"></li>
+                                <li><img src="img/icons/youtube-icon.png" width="60px"></li>
+                                <li><img src="img/icons/bacebook-icon.png" width="60px"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h6>©2025 Introspotive / Alexis Mabbun  |  All Rights Reserved</h6>
+             </section>
     </body>
 </html>
