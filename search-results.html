@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <body class="search-results">
+        <div class="header">
+            <h1><a href="index.html">introspotive</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="search.html" class="nav-button">search</a></li>
+                    <li><a href="blog.html" class="nav-button">blog</a></li>
+                    <li class="login"><a href="login.html">login</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-------------------------------search result page------------------------------------->
+        <section class="results">
+            <div class="search-bar">
+                        <form action="search-results.html">
+                            <select id="search-places" required>
+                                <option class="select-label" value="" disable selected hidden>Dallas/Fort Worth Metroplex</option>
+                                <option value="richardson">Dallas/Fort Worth Metroplex</option>
+                            </select>
+                            <button type="submit"><img src="img/icons/search-icon.png" width="30px"></button>
+                        </form>
+            </div>
+            <div class="results-gallery">
+                <div class="result-card">
+                    <div class="result-img rc1"></div>
+                    <div class="result-card-info">
+                        <div class="name-addy">
+                            <h4>Grutogi Bistro – Flower Mound</h4>
+                            <h6></h6>
+                        </div>
+                        <div class="rating">
+                            <img src="img/icons/categories/four.8.png" height="22px" class="star-rating">
+                            <h6>4.6/5</h6>
+                        </div>
+                        <p><strong>Summary:</strong> "A small establishment with limited seating and outlets but
+                        has a great menu and aesthetics. A good spot for quick work/activities like reading or writing.
+                        Not recommended for long stays due to the amount of space."</p>
+                        <div  class="search-attributes">
+                            <ul class="attribute-list">
+                                <li class="noise">Moderate</li>
+                                <li class="seating">Limited Seating</li>
+                                <li class="outlets">Low Access</li>
+                                <li class="busy">Busy at Noon</li>
+                                <li class="style">Rustic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+             <!----------------------------fooooter---------------------------->
+             <section class="home-footer">
+                <div class="footer-all">
+                    <h1>introspotive</h1>
+                    <div class="footer-content">
+                        <div class="footer-block g1">
+                            <h4>Get in Touch</h4>
+                            <ul class="contact">
+                                <li class="foot-email">contact@introspotive.com</li>
+                                <li class="foot-phone">(140)-111-0106</li>
+                                <li class="foot-addy">1110 The Spot Place, Suite 244,<br>Existence, TX 72067 </li>
+                            </ul>
+                        </div>
+                        <div class="footer-block g2">
+                            <h4>Links</h4>
+                            <ul>
+                                <li>My Account</li>
+                                <li>Settings</li>
+                                <li>About</li>
+                            </ul>
+                        </div>
+                        <div class="footer-block g3">
+                            <h4>Follow Us</h4>
+                            <ul>
+                                <li><img src="img/icons/insta-icon.png" width="60px"></li>
+                                <li><img src="img/icons/twitter-icon.png" width="60px"></li>
+                                <li><img src="img/icons/youtube-icon.png" width="60px"></li>
+                                <li><img src="img/icons/bacebook-icon.png" width="60px"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h6>©2025 Introspotive / Alexis Mabbun  |  All Rights Reserved</h6>
+             </section>
+    </body>
+</html>

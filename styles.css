@@ -109,7 +109,14 @@ body{
     }
 }
 
-
+@keyframes still{
+    from{
+        opacity:100%;
+    }
+    to{
+        opacity:100%;
+    }
+}
 /* ------------------------------------ header / nav ----------------------------*/
 
 .header h1{
@@ -133,7 +140,7 @@ body{
     justify-content: space-between;
     width: 95%;
     animation:fadein 1s ease-in;
-    animation-delay:0.3s;
+    animation-delay:0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -205,7 +212,7 @@ body{
 .hero {
     opacity:0%;
     animation: slideinfade 1s ease-in-out;
-    animation-delay: 0.8s;
+    animation-delay: 0.6s;
     animation-fill-mode: forwards;
     background-image: url(img/homepage/hero-img.jpg);
     background-size:cover;
@@ -639,8 +646,12 @@ h3{
     border-radius: 40px;
     display:flex;
     justify-content:center;
-    margin:0 auto 100px auto;
+    margin:0 auto 50px auto;
     padding: 180px 0 150px 0;
+    opacity:0%;
+    animation: slideinfade 1s ease-in-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
 }
 
 .search-page h3{
@@ -654,6 +665,10 @@ h3{
     flex-direction: column;
     justify-content:content;
     margin:0 auto;
+    opacity:0%;
+    animation: slideinfade 1s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
 .search-content img{
@@ -694,4 +709,395 @@ h3{
     color:#fdfaea;
     background-color:#5c839b;
 
+}
+
+.top-search{
+    opacity:0;
+    display:flex;
+    flex-direction: column;
+    width:95%;
+    margin:0 auto 120px auto;
+    animation: fadein 1s ease-in;
+    animation-delay:0.7s;
+    animation-fill-mode: forwards;
+}
+
+.search-header{
+    border-bottom: 3px solid #3a312d;
+    width:100%;
+    margin-bottom:50px;
+}
+
+.top-search h3{
+    color:#3a312d;
+    margin-top:0px;
+    margin-bottom:5px;
+    font-size:3.5em;
+    font-family: 'Instrument Serif', 'Times New Roman', serif;
+
+}
+
+.trend1{
+    background-color:#5c839b;
+    background-image:url('img/search/seventhday.jpg');
+    background-position-y:39%;
+    background-size:cover;
+    border-radius: 30px 30px 0 0;
+    width: 350px;
+    height:180px;
+    box-shadow: 1px 2px 3px #c4bfa7;
+}
+
+.trend2{
+    background-color:#5c839b;
+    background-image:url('img/search/sweet-hut.jpg');
+    background-position-y:39%;
+    background-size:cover;
+    border-radius: 30px 30px 0 0;
+    width: 350px;
+    height:180px;
+    box-shadow: 1px 2px 3px #c4bfa7;
+}
+
+.trend3{
+    background-color:#5c839b;
+    background-image:url('img/search/miao-spot.jpg');
+    background-position-y:75%;
+    background-size:cover;
+    border-radius: 30px 30px 0 0;
+    width: 350px;
+    height:180px;
+    box-shadow: 1px 2px 3px #c4bfa7;
+}
+
+.trend4{
+    background-color:#5c839b;
+    background-image:url('img/search/perc-coffeehouse.jpg');
+    background-position-y:39%;
+    background-size:cover;
+    border-radius: 30px 30px 0 0;
+    width: 350px;
+    height:180px;
+    box-shadow: 1px 2px 3px #c4bfa7;
+}
+
+
+.search-card-info{
+    background-color:#fdfaea;
+    padding: 5px 35px;
+    width: 280px;
+    height: fit-content;
+    border-radius:0 0 30px 30px;
+    box-shadow: 1px 2px 3px #c4bfa7;
+
+}
+
+.search-gal-card{
+    display:flex;
+    flex-direction:column;
+    width:fit-content;
+    height:fit-content;
+    flex-wrap:wrap;
+}
+
+.search-gal-card:hover{
+    transform: translateY(-20px) scale(105%);
+    transition: transform 0.2s ease-in-out;
+}
+
+.search-gallery{
+    display:flex;
+    gap:14px;
+    width:100%;
+    height:fit-content;
+    flex-wrap:wrap;
+    
+}
+
+.search-gal-card h4{
+    font-family: 'Instrument Serif', 'Times New Roman', serif;
+    letter-spacing:-1px;
+    color:#3a312d;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:2.5em;
+    font-weight:400;
+}
+
+.search-card-info h5{
+    font-family: 'Inter', 'Times New Roman', serif;
+    letter-spacing:0px;
+    color:#3a312d;
+    margin: 15px 0 0px 0px;
+    font-size:1em;
+    font-weight:400;
+    position:relative;
+    padding-left:20px;
+}
+
+
+.search-card-info h5::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:15px;
+    height:15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.search-card-info h5::before{
+    background-image:url('img/icons/categories/location-br.png');
+}
+
+.search-rating{
+    margin-top:8px;
+    display:flex;
+    flex-direction: row;
+    height:fit-content;
+    align-content:flex-end;
+    justify-items:flex-end;
+}
+
+.search-rating h6{
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    color:#3a312d;
+    font-size: 0.85em;
+    font-weight:300;
+    margin:0 0 10px 8px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #3a312d;
+    text-underline-offset: 3px;
+}
+
+.search-attributes{
+    height:fit-content;
+    width:100%;
+    margin-top:15px;
+}
+
+ul.attribute-list{
+    display:flex;
+    flex-wrap:wrap;
+    padding:0;
+    gap:5px;
+    height:fit-content;
+    width:100%;
+}
+
+.attribute-list li{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    font-size:14px;
+    list-style: none;
+    padding:2px 8px 2px 25px;
+    border: 1px solid #3a312d;
+    border-radius:20px;
+}
+
+.attribute-list li::before{
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width:15px;
+    height:15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.work-study::before{
+    background-image:url('img/icons/categories/check-icon.png');
+}
+
+.seating::before{
+    background-image:url('img/icons/categories/chair.png');
+}
+
+.outlets::before{
+    background-image:url('img/icons/categories/outlet.png');
+}
+
+.busy::before{
+    background-image:url('img/icons/categories/busy-icon.png');
+}
+
+.noise::before{
+    background-image:url('img/icons/categories/noise\ icon.png');
+}
+
+.style::before{
+    background-image:url('img/icons/categories/style-icon.png');
+}
+
+.hours::before{
+    background-image:url('img/icons/categories/hours-icon.png');
+}
+
+/*========================================================================
+                        search reuslt
+==========================================================================*/
+
+.search-results .header{
+    animation:still 0.0s ease-in;
+    opacity:100%;
+}
+
+.results{
+    width:95%;
+    height:fit-content;
+    margin:0 auto 100px auto;
+    display:flex;
+    flex-direction: column;
+}
+
+.search-bar{
+    width:100%;
+    height:80px;
+    background-color:#5c839b;
+    border-radius:30px 30px 0 0;
+    margin-bottom:0px;
+    box-shadow: 1px 2px 3px #c4bfa7;
+
+}
+
+.results-gallery{
+    width:100%;
+    height:400px;
+    background-color:#fdfaea;
+    border-radius:0 0 30px 30px;
+    margin-top:0;
+    box-shadow: 1px 2px 3px #c4bfa7;
+
+}
+
+
+.search-bar form{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    flex-direction:row;
+    width: 100%;
+}
+
+.search-bar select{
+    width: 90%;
+    height: 40px;
+    border-radius: 30px 0px 0px 30px;;
+    border:none;
+    padding-left: 25px;
+    font-family: 'Inter Tight', 'Helvetica', sans-serif;
+    font-size:1.05em;
+
+}
+
+.search-bar button{
+    border:none;
+    border-radius: 0 30px 30px 0;
+    width:50px;
+    height:40px;
+    font-family: 'Inter Tight', 'Helvetica', sans-serif;
+    font-size:1.05em;
+    font-weight:500;
+    letter-spacing:1px;
+    color:#fdfaea;
+    background-color:#3a312d;
+}
+
+.search-bar img{
+    position:relative;
+    top: 2px;
+    right:1px;
+}
+
+/*-----------------results card------------------------*/
+
+.result-card {
+    width:95%;
+    height:fit-content;
+    display:flex;
+    flex-direction: row;
+    margin:30px auto 0 auto;
+    row-gap:15px;
+}
+
+.result-card-info{
+    padding: 5px 40px 10px 25px;
+    background-color:white;
+    width:100%;
+    height:220px;
+    box-sizing: border-box;
+    flex:1;
+    border-radius: 0 25px 25px 0;
+    box-shadow: 1px 2px 3px #c4bfa7;
+
+}
+
+.result-img{
+    height: 220px;
+    width:220px;
+    background-color:#5c839b;
+    border-radius:25px 0 0 25px;
+    box-shadow: 1px 3px 3px #c4bfa7;
+
+}
+
+.name-addy{
+    display:flex;
+    align-items:flex-end;
+}
+
+.name-addy h4{
+    margin:0 15px 0px 0px;
+    font-family: 'Instrument Serif', 'Times New Roman', serif;
+    font-size:30px;
+    font-weight:500;
+    color:#3a312d;
+    padding-left:0;
+}
+
+
+.rating{
+    display:flex;
+    margin-top:5px;
+}
+
+.rating h6{
+    margin:0 15px 2px 7px;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-size:15px;
+    font-weight:500;
+    color:#3a312d;
+}
+
+.star-rating{
+    position:relative;
+}
+
+.rc1{
+    background-image:url('img/results/grutogi.jpg');
+    background-size:cover;
+    background-blend-mode: multiply;
+    opacity:90%;
+}
+
+.result-card p{
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-size:15px;
+    line-height:19px;
+    color:#3a312d;
+}
+
+.search-results ul{
+    margin-top:20px;
+}
+
+.search-results ul.attribute-list{
+    margin-bottom:0px;
+    margin-top:35px;
 }
