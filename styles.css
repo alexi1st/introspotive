@@ -132,16 +132,20 @@ body{
 
 
 .header {
-    opacity:0%;
     display:flex;
     flex-direction:row;
     align-items: center;
     margin:5px auto 14px auto;
     justify-content: space-between;
     width: 95%;
+}
+
+.home .header {
+    opacity:0%;
     animation:fadein 1s ease-in;
     animation-delay:0.2s;
     animation-fill-mode: forwards;
+    margin-top:5px;
 }
 
 .header a{
@@ -650,7 +654,7 @@ h3{
     padding: 180px 0 150px 0;
     opacity:0%;
     animation: slideinfade 1s ease-in-out;
-    animation-delay: 0.7s;
+    animation-delay: 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -801,17 +805,16 @@ h3{
 }
 
 .search-gal-card:hover{
-    transform: translateY(-20px) scale(105%);
-    transition: transform 0.2s ease-in-out;
+    transform: translateY(-25px);
+    transition: transform 0.3s ease-in-out;
 }
 
 .search-gallery{
     display:flex;
-    gap:14px;
+    gap:12px;
     width:100%;
     height:fit-content;
     flex-wrap:wrap;
-    
 }
 
 .search-gal-card h4{
@@ -949,16 +952,20 @@ ul.attribute-list{
 }
 
 .results{
+    opacity:0%;
     width:95%;
     height:fit-content;
     margin:0 auto 100px auto;
     display:flex;
     flex-direction: column;
+    animation: slideinfade 0.8s ease-in-out;
+    animation-delay:0.2s;
+    animation-fill-mode: forwards;
 }
 
 .search-bar{
     width:100%;
-    height:80px;
+    height:100px;
     background-color:#5c839b;
     border-radius:30px 30px 0 0;
     margin-bottom:0px;
@@ -967,20 +974,34 @@ ul.attribute-list{
 }
 
 .results-gallery{
+    display:flex;
+    flex-direction: column;
     width:100%;
-    height:400px;
+    height:860px;
     background-color:#fdfaea;
     border-radius:0 0 30px 30px;
     margin-top:0;
     box-shadow: 1px 2px 3px #c4bfa7;
+    padding-bottom: 50px;
+    padding-top:30px;
+    row-gap: 15px;
+    box-sizing:border-box;
+}
 
+.gallery-display{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+    height:800px;
+    width:100%;
+    overflow-y:scroll;
 }
 
 
 .search-bar form{
     display:flex;
     justify-content:center;
-    margin-top:20px;
+    margin-top:40px;
     flex-direction:row;
     width: 100%;
 }
@@ -1020,28 +1041,28 @@ ul.attribute-list{
 .result-card {
     width:95%;
     height:fit-content;
+    max-height:220px;
     display:flex;
     flex-direction: row;
-    margin:30px auto 0 auto;
-    row-gap:15px;
+    margin:0px auto 0 auto;
 }
 
 .result-card-info{
     padding: 5px 40px 10px 25px;
-    background-color:white;
+    background-color:#fffef6;
     width:100%;
     height:220px;
     box-sizing: border-box;
     flex:1;
     border-radius: 0 25px 25px 0;
     box-shadow: 1px 2px 3px #c4bfa7;
-
+    overflow-y:auto;
 }
 
 .result-img{
     height: 220px;
     width:220px;
-    background-color:#5c839b;
+    background-color:#46687e;
     border-radius:25px 0 0 25px;
     box-shadow: 1px 3px 3px #c4bfa7;
 
@@ -1050,6 +1071,7 @@ ul.attribute-list{
 .name-addy{
     display:flex;
     align-items:flex-end;
+    margin-top:15px;
 }
 
 .name-addy h4{
@@ -1058,7 +1080,68 @@ ul.attribute-list{
     font-size:30px;
     font-weight:500;
     color:#3a312d;
-    padding-left:0;
+    padding-left:2px;
+}
+
+.addy{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    margin-top:4px;
+}
+
+.place-addy::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    width:18px;
+    height:18px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.place-hours::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    width:17px;
+    height:17px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.place-addy::before{
+    background-image:url('img/icons/categories/location-br.png');
+}
+
+.place-hours::before{
+    background-image:url('img/icons/categories/hours-icon.png');
+}
+
+.place-addy{
+    position:relative;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-weight:400;
+    font-size:14px;
+    color:#3a312d;
+    margin: 0;
+    padding-left:22px;
+    width:fit-content;
+}
+
+h6.place-hours{
+    position:relative;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-weight:400;
+    font-size:14px;
+    color:#3a312d;
+    margin:0;
+    padding-left:25px;
 }
 
 
@@ -1079,11 +1162,11 @@ ul.attribute-list{
     position:relative;
 }
 
-.rc1{
+.rc5{
     background-image:url('img/results/grutogi.jpg');
     background-size:cover;
-    background-blend-mode: multiply;
-    opacity:90%;
+    background-blend-mode: normal;
+    opacity:98%;
 }
 
 .result-card p{
@@ -1100,4 +1183,322 @@ ul.attribute-list{
 .search-results ul.attribute-list{
     margin-bottom:0px;
     margin-top:35px;
+}
+
+/*===================================================
+                 blgo homepage
+=====================================================*/
+
+
+body.blog-page{
+    height:fit-content;
+    display:flex;
+    flex-direction: column;
+    margin-top:5px;
+    margin-bottom:0;
+}
+
+.blog-home{
+    width:95%;
+    margin:0 auto 0 auto;
+    padding-top:0;
+}
+
+.blog-home-img{
+    background-color:#928b85;
+    background-image: url(img/blog/blog-img.jpg);
+    background-blend-mode: multiply;
+    background-size:cover;
+    background-position-y: 75%;
+    margin:0 auto;
+    opacity:96%;
+    width:90%;
+    height:250px;
+    box-sizing: border-box;
+    border-radius:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    opacity:0;
+    animation: slideinfade 0.8s ease-in-out;
+    animation-delay:0.2s;
+    animation-fill-mode: forwards;
+}
+
+.blog-home-img h3{
+    margin:0 auto;
+    color:#fdfaea;
+    font-size:5.2em;
+}
+
+.blog-home-img p{
+    color:#fdfaea;
+    font-family: 'Inter', 'Helvetica', sans-serif; 
+    width:45%;
+    text-align:center;
+    margin: 0 auto;
+    line-height:21px;
+}
+
+h4.blog-sorting{
+    font-family:'Instrument Serif', 'Times New Roman', serif;
+    font-size:4em;
+    font-weight:300;
+    color:#3a312d;
+    margin:30px auto 50px auto;
+    width:90%;
+    border-bottom: 3px solid #3a312d;
+    opacity:0;
+    animation: slideinfade 0.8s ease-in-out;
+    animation-delay:0.5s;
+    animation-fill-mode: forwards;
+}
+
+.blog-gallery{
+    margin:0 auto 50px auto;
+    width:90%;
+    opacity:0;
+    animation: slideinfade 0.8s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+
+.featured-blogs{
+    display:flex;
+    justify-content:space-between;
+    width:95%;
+    max-width:2000px;
+    align-items:stretch;
+    flex:1;
+    margin:0 auto;
+}
+
+@media (min-width: 2000px){
+    .featured-blogs{
+        display:flex;
+        flex-direction:row;
+        gap:30px;
+        justify-content:left;
+        margin: 0px;
+        flex:0;
+        width:100%;
+    }
+}
+
+.blog-display {
+    display:flex;
+    flex-direction:column;
+    justify-content:0;
+}
+
+.blog-display-img{
+    width:600px;
+    height:300px;
+    background-color:#46687e;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 1px 3px 3px #c4bfa7;
+}
+
+.art1{
+    background-image:url('img/blog/utd-banner-building.jpg');
+    background-size: cover;
+    background-position-y: top;
+}
+
+.art2{
+    background-image:url('img/blog/book-place.jpg');
+    background-size:cover;
+    background-position-y:39%;
+    background-blend-mode: overlay;
+    background-color:#8b796d;
+}
+
+.blog-display-info{
+    width:600px;
+    height:fit-content;
+    padding:20px 50px;
+    box-sizing: border-box;
+    background-color:#fdfaea;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 1px 3px 3px #c4bfa7;
+    flex:1;
+}
+
+.blog-display-info h6{
+    margin:10px 0 0 0;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-size:1em;
+    font-weight:400;
+    color:#7e716c;
+}
+
+.blog-display-info h5{
+    margin:5px 0 0 0;
+    font-family: 'Instrument Serif', 'Times New Roman', sans-serif;
+    font-size:3em;
+    font-weight:300;
+    color:#3a312d;
+    line-height: 40px;
+
+}
+
+.blog-display-info p{
+    line-height: 20px;
+    color:#3a312d;
+}
+
+.recent-blogs .blog-display-img{
+    width:300px;
+    height:250px;
+}
+
+.recent-blogs .blog-display-info{
+    width:300px;
+    height:fit-content;
+    padding:15px 30px;
+}
+
+.recent-blogs h6{
+    font-size:0.75em;
+}
+
+.recent-blogs h5{
+    font-size:2.5em;
+}
+
+.recent-blogs p{
+    font-size:0.9em;
+}
+
+.all-recents{
+    width:100%;
+    height:fit-content;
+    display:flex;
+    flex-direction: row-reverse;
+    row-gap:30px;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content: left;
+}
+
+@media (min-width:2000px){
+    .all-recents{
+        display:flex;
+        flex-direction: row-reverse;
+        gap:25px;
+        justify-content:left;
+        margin: 0px;
+        flex:0;
+        width:100%;
+    }
+}
+
+
+.recent1{
+    background-image:url('img/blog/utd-banner-building.jpg');
+    background-size:cover;
+    background-position-y: 50%;
+    background-position-x: 58%;;
+}
+
+.recent2{
+    background-image:url('img/blog/book-place.jpg');
+    background-size:cover;
+    background-position-y: 50%;
+    background-position-x: 58%;;
+    background-blend-mode: overlay;
+    background-color:#8b796d;
+}
+
+/*====================================================
+                    login page
+======================================================*/
+
+.login-section{
+    display:flex;
+    justify-content:center;
+    margin: 0 auto 100px auto;
+    width:95%;
+    max-width:1500px;
+    gap:100px;
+}
+
+.login-form{
+    width:45%;
+    max-width:1200px;
+}
+
+form{
+    display:flex;
+    flex-direction: column;;
+    justify-content:center;
+    margin:0 auto;
+}
+
+.login-container h3{
+    margin-bottom: 25px;
+}
+
+.login-container h5{
+    margin: 10px 0 10px 0;
+    font-size:16px;
+    font-weight: 400;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    color:#3a312d;
+}
+
+.login-form input, .login-form button{
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    justify-self:center;
+    align-items:center;
+}
+
+.login-form input{
+    font-family:'Inter', 'Helvetica', sans-serif;
+    width: 80%;
+    height:40px;
+    border-radius:30px;
+    border:1px solid #3a312d;
+    padding-left:20px;
+    box-sizing: border-box;
+}
+
+.login-inputs{
+    width:80%;
+    max-width:600px;
+    display:flex;
+    flex-direction: column;
+    row-gap:10px;
+}
+
+.login-form button{
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-size:18px;
+    font-weight:600;
+    background-color:#5c839b;
+    color:#fdfaea;
+    width:30%;
+    max-width:250px;
+    border: 1px solid #5c839b;
+    border-radius:30px;
+    height:40px;
+    padding-top:8px;
+    box-sizing: border-box;
+    margin-top:30px;
+}
+
+
+.login-container{
+    justify-items:center;
+}
+
+.login-image{
+    width:45%;
+    max-width:900px;
+    height:700px;
+    background-image: url('img/login/studying.jpg');
+    background-size:cover;
+    border-radius:30px;
 }
