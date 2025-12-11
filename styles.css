@@ -52,7 +52,7 @@ html {font-size: 16px;}
 
 body {
   background-image:url("img/noisy.png");
-  font-family: 'Inter Tight','Helvetica', sans-serif;
+  font-family: 'Inter','Helvetica', sans-serif;
   font-weight: false;
   line-height: 1.65;
   overflow-x:hidden;
@@ -75,14 +75,14 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: true;
   line-height: 1.15;
 }
 
 h1,
 .text-size-h1 {
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   margin-top: 0;
   font-size: 3.05em;
@@ -112,7 +112,7 @@ body{
     background-color: #fdfaea;
     width:cover;
     height: 600px;
-    font-family: 'Inter', 'Impact', 'Helvetica', sans-serif;
+    font-family: 'Inter', 'Helvetica', sans-serif;
 }
 
 .home {
@@ -567,7 +567,11 @@ h3{
     margin: 10px 0 10px 0;
     text-align:left;
     width:fit-content;
+}
 
+.footer-all a{
+    color:#5c839b;
+    text-decoration: none;
 }
 
 .footer-content{
@@ -1318,7 +1322,25 @@ h4.blog-sorting{
     }
 }
 
+a.blog-direct{
+    text-decoration: none;
+    flex:1;
+    display:flex;
+}
+
+a.blog-direct:hover{
+    transform: translateY(-25px);
+    transition: transform 0.3s ease-in-out;
+}
+
 .blog-display {
+    display:flex;
+    flex-direction:column;
+    justify-content:0;
+    flex:1;
+}
+
+.blog-display-sm {
     display:flex;
     flex-direction:column;
     justify-content:0;
@@ -1427,14 +1449,14 @@ h4.blog-sorting{
 }
 
 
-.recent1{
+.recent2{
     background-image:url('img/blog/utd-banner-building.jpg');
     background-size:cover;
     background-position-y: 50%;
     background-position-x: 58%;;
 }
 
-.recent2{
+.recent1{
     background-image:url('img/blog/book-place.jpg');
     background-size:cover;
     background-position-y: 50%;
@@ -1470,10 +1492,12 @@ form{
 
 .login-container h3{
     margin-bottom: 25px;
+    color:#3a312d;
 }
 
 .login-container h5{
-    margin: 10px 0 10px 0;
+    margin: 10px auto 10px auto;
+    width:fit-content;
     font-size:16px;
     font-weight: 400;
     font-family: 'Inter', 'Helvetica', sans-serif;
@@ -1486,6 +1510,15 @@ form{
     margin:0 auto;
     justify-self:center;
     align-items:center;
+}
+
+.login-form-full{
+    width:80%;
+}
+
+.login-inputs input#username, .login-inputs input#user-pw{
+    margin-left:0;
+    width:100%;
 }
 
 .login-form input{
@@ -1503,7 +1536,8 @@ form{
     max-width:600px;
     display:flex;
     flex-direction: column;
-    row-gap:10px;
+    row-gap:0px;
+    margin:0 auto;
 }
 
 .login-form button{
@@ -1534,4 +1568,420 @@ form{
     background-image: url('img/login/studying.jpg');
     background-size:cover;
     border-radius:30px;
+    opacity: 0%;
+    animation: slideinfade 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
 }
+
+.login-form{
+    opacity: 0%;
+    animation: slideinfade 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+
+.signup-option{
+    color:#3a312d;
+}
+
+.tos-checkbox{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    font-size:16px;
+    gap:8px;
+}
+
+.tos-checkbox label{
+    font-size:14px;
+    row-gap:0px;
+}
+
+input#tos{
+    margin:0;
+    width:17px;
+}
+
+u.tos{
+    color:#5c839b;
+}
+
+u.tos:hover, u:hover{
+    color:#46687e;
+    cursor:pointer;
+}
+
+/*======================================================
+                        sign up 
+========================================================*/
+
+.signup-section{
+    display:flex;
+    justify-content:center;
+    margin: 0 auto 100px auto;
+    width:95%;
+    max-width:1500px;
+    gap:100px;
+}
+
+.signup-form{
+    width:45%;
+    max-width:1200px;
+}
+
+form{
+    display:flex;
+    flex-direction: column;;
+    justify-content:center;
+    margin:0 auto;
+}
+
+.signup-container h3{
+    margin-bottom: 25px;
+    color:#3a312d;
+}
+
+.signup-container h5{
+    margin: 10px 0 10px 0;
+    font-size:16px;
+    font-weight: 400;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    color:#3a312d;
+}
+
+.signup-form button{
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    justify-self:center;
+    align-items:center;
+}
+
+.signup-form input{
+    display:flex;
+    flex-direction:column;
+    margin:0 auto 10px auto;
+    justify-self:center;
+    align-items:center;
+}
+
+input#email, input#username, input#user-pw,
+input#user-pw-repeat{
+    margin-bottom:10px;
+    margin-right:0px;
+}
+
+.signup-form input{
+    font-family:'Inter', 'Helvetica', sans-serif;
+    width: 100%;
+    height:40px;
+    border-radius:30px;
+    border:1px solid #3a312d;
+    padding-left:20px;
+    box-sizing: border-box;
+}
+
+.signup-form-full{
+    width:80%;
+}
+
+.signup-inputs{
+    width:80%;
+    max-width:600px;
+    display:flex;
+    flex-direction: column;
+    row-gap:0px;
+    justify-content:center;
+    margin:0 auto;
+    box-sizing: border-box;
+}
+
+.signup-form button{
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-size:18px;
+    font-weight:600;
+    background-color:#5c839b;
+    color:#fdfaea;
+    width:30%;
+    max-width:250px;
+    border: 1px solid #5c839b;
+    border-radius:30px;
+    height:40px;
+    padding-top:8px;
+    box-sizing: border-box;
+    margin-top:30px;
+}
+
+
+.signup-container{
+    justify-items:center;
+}
+
+.signup-image{
+    width:45%;
+    max-width:900px;
+    height:700px;
+    background-color:#e7ddd8;
+    background-blend-mode: multiply;
+    background-image: url('img/login/signup-study.jpg');
+    background-size:cover;
+    background-position-y: 62%;
+    border-radius:30px;
+    opacity: 0%;
+    animation: slideinfade 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+
+.signup-form{
+    opacity: 0%;
+    animation: slideinfade 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+
+.signup-option{
+    color:#3a312d;
+
+}
+
+.signup-inputs label, .signup-inputs input{
+    margin-left:0;
+    color:#3a312d;
+    margin-bottom:0px;
+}
+
+/*====================================================
+                blog article laytou
+======================================================*/
+
+.article{
+    display:flex;
+    flex-direction: row;
+    width:85%;
+    height:fit-content;
+    box-sizing: border-box;
+    margin:25px auto 100px auto;
+    border-top:2px solid #3a312d;
+    padding-top:40px;
+    animation: slideinfade 0.8s ease-in-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    opacity:0%;
+}
+
+.article-layout{
+    width:80%;
+    box-sizing: border-box;
+    border-right: 2px solid #3a312d;
+    padding: 0 40px 0px 0px;
+}
+
+.article-header{
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.article-header h3{
+    color:#3a312d;
+    margin:5px 0 5px 0;
+}
+
+.article-header h4{
+    color:#3a312d;
+    margin:10px 0 5px 0;
+    font-size:18px;
+}
+
+.utd-spots .article-big-img{
+    background-image:url('img/blog/utd-banner-building.jpg');
+    background-size:cover;
+    border-radius: 20px;
+    width:100%;
+    height:500px;
+    margin-bottom: 50px;
+}
+
+.utd-study-spots{
+    margin-left:50px;
+    margin-bottom:50px;
+}
+
+.utd-study-spots img{
+    width:700px;
+    height:450px;
+    max-width:70%;
+}
+
+article p, article h5{
+    width:90%;
+    max-width:1000px;
+}
+
+article p{
+    color:#3a312d;
+    line-height:22px;
+}
+
+article h5{
+    margin:25px 0 5px 0;
+    font-size:2em;
+    color:#3a312d;
+}
+
+article img{
+    border-radius:20px;
+}
+
+.article-sidebar{
+    background-color:none;
+    width:18%;
+    max-width: 350px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    margin:0 auto;
+}
+
+.sidebar-rec{
+    margin:0 auto;
+    padding:15px 0;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction: column;
+    width:85%;
+    height:fit-content;
+    border-bottom:2px solid #3a312d;
+}
+
+.sidebar-rec h5{
+    color:#3a312d;
+    margin: 0 0 10px 0;
+
+}
+
+.sidebar-rec p{
+    margin-top: 0px;
+}
+
+.sidebar-rec ul{
+    display:flex;
+    flex-wrap: wrap;
+    gap:5px;
+    padding:0;
+    width:100%;
+    margin-top:8px;
+}
+
+.sidebar-rec li{
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-size:14px;
+    font-weight:600;
+    text-align:center;
+    width:fit-content;
+    height:fit-content;
+    color:#3a312d;
+    padding: 4px 8px;
+    border: 2px solid #3a312d;
+    border-radius:20px;
+    list-style-type: none;
+}
+
+ul.sidebar-social{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+    row-gap:0px;
+}
+
+.sidebar-social li{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+    row-gap:50px;
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.sidebar-blog{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+}
+
+.sidebar-blog-img{
+    width:100%;
+    height:200px;
+    background-image:url('img/blog/book-place.jpg');
+    background-size:cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.sidebar-blog h5{
+    margin:0;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    background-color:#fdfaea;
+    border-radius: 0 0 20px 20px;
+    width:100%;
+    height:fit-content;
+    font-family: 'Instrument Serif', 'Times New Roman', serif;
+    font-size:24px;
+    font-weight:400;
+    color:#3a312d;
+}
+
+.sidebar-rec a{
+    text-decoration: none;
+    margin:0;
+}
+
+.sidebar-search form{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.sidebar-search select{
+    height:30px;
+    width:100%;
+    border-radius: 20px;
+    font-family:'Inter', 'Helvetica', sans-serif;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+
+.sidebar-search button{
+    font-family:'Inter', 'Helvetica', sans-serif;
+    color:#fdfaea;
+    width: 50%;
+    height:30px;
+    border-radius: 20px;
+    border:none;
+    background-color:#5c839b;
+    margin:0 auto 15px auto;
+    
+}
+
+.reading-spots .sidebar-blog-img{
+    background-image:url('img/blog/utd-banner-building.jpg');
+    background-position-x: 55%;
+}
+
+.reading-spots .article-big-img{
+    background-image:url('img/blog/book-place.jpg');
+    background-size: cover;
+    background-position-y: 40%;
+    border-radius: 20px;
+    width:100%;
+    height:500px;
+    margin-bottom: 50px;
+}
+
+
+
+
