@@ -1061,6 +1061,7 @@ ul.attribute-list{
 .results{
     opacity:0%;
     width:95%;
+    max-width:2000px;
     height:fit-content;
     margin:0 auto 100px auto;
     display:flex;
@@ -1086,7 +1087,7 @@ ul.attribute-list{
     display:flex;
     flex-direction: column;
     width:100%;
-    height:fit-content;
+    height:860px;
     background-color:#fdfaea;
     border-radius:0 0 30px 30px;
     margin-top:0;
@@ -1101,8 +1102,11 @@ ul.attribute-list{
     display:flex;
     flex-direction: column;
     gap:25px;
-    height:fit-content;
+    height:800px;
     width:100%;
+    overflow-y:scroll;
+    scrollbar-color:#5c839b7e #fdfaea;
+    scrollbar-width: thin;
 }
 
 
